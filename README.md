@@ -2,6 +2,24 @@
 
 Proyecto Maven inicial para el post1-u3.
 
+## Instrucciones de Build y Ejecución
+
+Para compilar, ejecutar las pruebas y correr los benchmarks del proyecto, asegúrate de tener instalado Java 17 y Maven. Luego, puedes usar los siguientes comandos desde la raíz del proyecto:
+
+1. **Compilar el proyecto:**
+   ```bash
+   mvn clean compile
+   ```
+2. **Ejecutar Pruebas Unitarias:**
+   ```bash
+   mvn test
+   ```
+3. **Empaquetar y ejecutar Benchmarks (JMH):**
+   ```bash
+   mvn clean package
+   java -jar target/benchmarks.jar
+   ```
+
 ## Notas sobre Fibonacci
 
 Para las pruebas unitarias de las implementaciones de Fibonacci, la variante recursiva ingenua (`fibRecursivo`) solo se prueba con valores de `n ≤ 30`. No se prueba con valores de `n` grandes (ej. 40 o más) porque tiene una complejidad temporal exponencial de `O(2^n)`, por lo tanto los tiempos de ejecución crecen dramáticamente y las pruebas tomarían un tiempo prohibitivo.
